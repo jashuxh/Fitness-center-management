@@ -69,7 +69,7 @@ int main(){
 
                 printf("Enter name: ");
                 scanf("%49s",m[count].name);
-                printf("Enter name: ");
+                printf("Enter Surename: ");
                 scanf("%49s",m[count].surename);
                 printf("Enter Age: ");
                 scanf("%d", &m[count].age);
@@ -107,7 +107,7 @@ int main(){
                         strcat(temp2, " ");
                         strcat(temp2,m[i].surename);
                         printf("Name: %s\n",temp2);
-                        printf("Name: %s",m[i].name);
+                        printf("SureName: %s",m[i].name);
                         printf("Name lenght: %zu", strlen(m[i].name));
                         
                         strcpy(temp1,m[i].name);
@@ -158,6 +158,28 @@ int main(){
                     printf("Member not found!!");
                 }
                 break;
+
+            case 4:
+                printf("Search by:\n");
+                printf("1. Member ID\n");
+                printf("2. Member name\n");
+                printf("Enter your Choice\n");
+                scanf("%d",&searchChoice);
+
+                if(searchChoice == 1)
+                {
+                    printf("Enter Member ID");
+                    scanf("%d", &id);
+                    
+                    for(i = 0;i < count; i++)
+                    {
+                        if(m[i].id == id)
+                        {
+                            found = 1;
+                            break;
+                        }
+                    }
+                }
         }
     }
     
